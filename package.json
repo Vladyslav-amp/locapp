@@ -1,7 +1,7 @@
 {
   "name": "locapp",
   "version": "0.1.0",
-  "homepage": "https://vladyslav-amp.github.io/locapp/",
+  "homepage": "https://vladyslav-amp.github.io/locapp",
   "private": true,
   "dependencies": {
     "@googlemaps/markerclustererplus": "^1.2.10",
