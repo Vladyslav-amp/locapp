@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["@types/node", "@react-google-maps/api"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
