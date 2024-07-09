@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/locapp/static/css/main.31d6cfe0.css",
+    "main.js": "/locapp/static/js/main.5d43975e.js",
+    "index.html": "/locapp/index.html",
+    "main.5d43975e.js.map": "/locapp/static/js/main.5d43975e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.5d43975e.js"
+  ]
+}
