@@ -3,8 +3,7 @@ import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
 import { addDoc, collection, deleteDoc, doc, getDocs, writeBatch, serverTimestamp, updateDoc } from 'firebase/firestore';
 import firestore from '../../config/firebaseConfig';
 import { v4 as uuidv4 } from 'uuid';
-
-import MarkerClusterer from '@googlemaps/markerclustererplus';
+// import MarkerClusterer from '@googlemaps/markerclustererplus';
 
 
 const containerStyle = {
@@ -28,6 +27,8 @@ const Map: React.FC = () => {
   const [selectedMarker, setSelectedMarker] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [lastUsedLabelNumber, setLastUsedLabelNumber] = useState<number>(1);
+  // const [apiKey, setApiKey] = useState<string | undefined>(undefined);
+
 
   const onClick = useCallback(async (e: google.maps.MapMouseEvent) => {
     if (e.latLng) {
@@ -138,8 +139,10 @@ const Map: React.FC = () => {
     }
   };
 
+  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY || 's';
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyBOTrybSTma2LRiKfXYuR_u2RCINeBAKFA">
+    <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
